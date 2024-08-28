@@ -10,7 +10,7 @@ defmodule UeberauthAuth0.Mixfile do
       version: @version,
       name: "Ueberauth Auth0",
       package: package(),
-      elixir: "~> 1.10",
+      elixir: "~> 1.13",
       deps: deps(),
       docs: docs(),
       build_embedded: Mix.env() == :prod,
@@ -46,18 +46,10 @@ defmodule UeberauthAuth0.Mixfile do
     [
       {:ueberauth, "~> 0.10"},
       {:oauth2, "~> 2.0"},
-
-      # Docs:
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
-
-      # Testing:
       {:exvcr, "~> 0.10", only: :test},
       {:excoveralls, "~> 0.11", only: :test},
-
-      # Type checking
       {:dialyxir, "~> 1.2.0", only: [:dev, :test], runtime: false},
-
-      # Lint:
       {:credo, "~> 1.1", only: [:dev, :test]}
     ]
   end
